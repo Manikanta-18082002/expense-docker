@@ -11,3 +11,8 @@ sudo systemctl start docker
 sudo systemctl enable docker
 usermod -aG docker ec2-user
 echo -e "$R Logout and Login Again $N"
+
+# 1st Clone https://github.com/Manikanta-18082002/expense-docker.git into server
+#2nd Run images (Below) to use docker compose
+# for i in backend frontend mysql ; do cd $i ; docker build -t $i:v1.0 . ; cd ..; done
+
