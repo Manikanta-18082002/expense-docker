@@ -1,3 +1,4 @@
+version: '3.8'
 name: expense
 networks: # this is global can use by any below  var
   default:
