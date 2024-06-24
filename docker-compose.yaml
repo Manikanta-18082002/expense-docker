@@ -3,6 +3,10 @@ name: expense
 networks: # this is global can use by any below  var
   default:
     name: expense
+volumes:
+  mysql: # this is docker volume create mysql
+  volumes:
+    - mysql:/var/lib/mysql  # -v volume-name:/path/in/container
 services:
   mysql:
     image: mysql:v1.0
