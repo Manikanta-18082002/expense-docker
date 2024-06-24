@@ -5,14 +5,15 @@ networks: # this is global can use by any below  var
     name: expense
 volumes:
   mysql: # this is docker volume create mysql
-  volumes:
-    - source: mysql
-      target: /var/lib/mysql  # -v volume-name:/path/in/container
-      type: volume
+    external: true
 services:
   mysql:
     image: mysql:v1.0
     container_name: mysql # --name mysql
+    volumes:
+    - source: mysql
+      target: /var/lib/mysql  # -v volume-name:/path/in/container
+      type: volume
   backend:
     image: backend:v1.0
     container_name: backend
