@@ -6,7 +6,9 @@ networks: # this is global can use by any below  var
 volumes:
   mysql: # this is docker volume create mysql
   volumes:
-    - mysql:/var/lib/mysql  # -v volume-name:/path/in/container
+    - source: mysql
+      target: /var/lib/mysql  # -v volume-name:/path/in/container
+      type: volume
 services:
   mysql:
     image: mysql:v1.0
