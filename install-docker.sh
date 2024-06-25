@@ -16,3 +16,8 @@ echo -e "$R Logout and Login Again $N"
 #2nd Run images (Below) to use docker compose
 # for i in backend frontend mysql ; do cd $i ; docker build -t $i:v1.0 . ; cd ..; done
 
+#  docker exec -it backend bash
+# curl -o /dev/null -s -w 'Total: %{time_total}s\n'tal: %{time_total}s\n' http://localhost:8080/transaction
+
+#alpine os dosen't work for statefull apllications (Database)
+# Works only for stateless  applications (Frontend, backend)

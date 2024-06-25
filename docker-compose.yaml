@@ -4,8 +4,8 @@ networks: # this is global can use by any below  var
   default:
     name: expense
 volumes:
-  mysql: # this is docker volume create mysql
-    external: true
+  mysql: 
+    # external: true # if true we need to create manually (docker volume create mysql)
 services:
   mysql:
     image: mysql:v1.0
@@ -27,3 +27,6 @@ services:
       - backend
     ports:
       - "80:80"
+
+
+      
