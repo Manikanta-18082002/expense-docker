@@ -16,4 +16,4 @@ RUN touch /var/run/nginx.pid && \
 COPY expense.conf /etc/nginx/nginx.conf
 COPY code /usr/share/nginx/html/
 # Till above is root access
-USER nginx
+USER nginx 
