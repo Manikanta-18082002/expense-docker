@@ -16,8 +16,22 @@ echo -e "$R Logout and Login Again $N"
 #2nd Run images (Below) to use docker compose
 # for i in backend frontend mysql ; do cd $i ; docker build -t $i:v1.0 . ; cd ..; done
 
+# docker compose up -d
+# docker compose down
 #  docker exec -it backend bash
 # curl -o /dev/null -s -w 'Total: %{time_total}s\n'tal: %{time_total}s\n' http://localhost:8080/transaction
 
 #alpine os dosen't work for statefull apllications (Database)
 # Works only for stateless  applications (Frontend, backend)
+
+# To delete all images
+# docker system prune -a --> to delete all cache
+# docker builder prune
+# docker image prune
+
+# To see the layers while build an image
+# set DOCKER_BUILDKIT=0
+# export DOCKER_BUILDKIT=0
+
+# Docker follow intermediate containers and layering approach for better storage
+#Docker create container from 1st intruction and runs the second instrucion and runs the image out of it and then delete the intermediate container
