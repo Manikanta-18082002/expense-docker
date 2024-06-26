@@ -15,10 +15,10 @@ services:
     - MYSQL_USER=expense
     - MYSQL_PASSWORD=ExpenseApp@1
     - MYSQL_DATABASE=transactions
-    # volumes: # This need root access but user is normal user
-    # - source: mysql
-    #   target: /var/lib/mysql  # -v volume-name:/path/in/container
-    #   type: volume
+    volumes:
+    - source: mysql
+      target: /var/lib/mysql  # -v volume-name:/path/in/container
+      type: volume
   backend:
     image: backend:v1.0
     container_name: backend
